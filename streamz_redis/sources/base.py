@@ -19,7 +19,11 @@ class RedisSource(Source, RedisNode):
     """
 
     def __init__(self, **kwargs):
-        super().__init__(ensure_io_loop=True, **kwargs)
+        # To fix the following error:
+        #   TypeError: streamz_redis.base.RedisNode.__init__() got multiple values for keyword argument 'ensure_io_loop'
+
+        # super().__init__(ensure_io_loop=True, **kwargs)
+        super().__init__(**kwargs)
 
     def start(self):
         self.stopped = False
