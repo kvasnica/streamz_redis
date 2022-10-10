@@ -13,7 +13,7 @@ setup(
         "streamz.sources": [
             "from_redis_lists = streamz_redis.sources:from_redis_lists",
             "from_redis_streams = streamz_redis.sources:from_redis_streams",
-            "from_redis_comsumer_group = "
+            "from_redis_consumer_group = "
             "streamz_redis.sources:from_redis_consumer_group",
         ],
         "streamz.sinks": [
